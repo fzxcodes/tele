@@ -672,7 +672,7 @@ bot.on("message", async(lol) => {
                 await reply(text)
                 break
               case 'start':
-              reply('Halo ${user}, Selamat Datang Di FZXBOTZ\nketik /help untuk melihat menu\n\nFZXBOTZ BY FAIZ')
+              reply('halo, Selamat Datang Di FZXBOTZ\nketik /help untuk melihat menu\n\nFZXBOTZ BY FAIZ')
               break  
 // Movie & Story
             case 'lk21':
