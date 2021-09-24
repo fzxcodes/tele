@@ -207,6 +207,7 @@ bot.on("message", async(lol) => {
                 surah = args[0]
                 await lol.replyWithAudio({ url: `https://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${apikey}` })
                 break
+
             case 'asmaulhusna':
                 if (!isUser) return await reply(mess.ser)
                 result = await fetchJson(`https://api.lolhuman.xyz/api/asmaulhusna?apikey=${apikey}`)
@@ -381,6 +382,7 @@ bot.on("message", async(lol) => {
                 }
                 await lol.replyWithAudio({ url: result.audio[0].link, filename: result.info.song }, { thumb: result.image })
                 break
+
             case 'zippyshare':
                 if (!isUser) return await reply(mess.ser)
                 if (args.length == 0) return await reply(`Example: ${prefix + command} https://www51.zippyshare.com/v/5W0TOBz1/file.html`)
@@ -669,8 +671,10 @@ bot.on("message", async(lol) => {
                 }
                 await reply(text)
                 break
-
-                // Movie & Story
+              case 'start':
+              reply('Halo ${user}, Selamat Datang Di FZXBOTZ\nketik /help untuk melihat menu\n\nFZXBOTZ BY FAIZ')
+              break  
+// Movie & Story
             case 'lk21':
                 if (isBann) return await reply(mess.ban)
                 if (!isUser) return await reply(mess.ser)
