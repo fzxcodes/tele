@@ -165,7 +165,8 @@ bot.on("message", async(lol) => {
        
           
         switch (command) {
-            case 'help': 
+            case 'help':
+            case 'start': 
                   runtime = process.uptime()
                  if (!isUser) return await reply(mess.ser)
                  await help.help(lol, user.full_name, lol.message.from.id.toString())
